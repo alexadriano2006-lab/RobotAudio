@@ -1,7 +1,8 @@
 import { TtsService } from './user.service.js'; // Atenção ao .js no final se o TS exigir por conta do ES Modules
+const MENSAGEM_PADRAO = 'Olá, humanos!';
 const ttsService = new TtsService();
 export async function gerarAudio(req, res) {
-    const mensagem = req.query.texto || 'Olá, humanos!';
+    const mensagem = req.query.texto || MENSAGEM_PADRAO;
     try {
         console.log(`[TTS] Processando áudio para: "${mensagem}"`);
         // Chama a regra de negócio
