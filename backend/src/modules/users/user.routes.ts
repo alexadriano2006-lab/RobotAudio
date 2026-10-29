@@ -7,3 +7,6 @@ const router = Router();
 router.get('/tts', gerarAudio);
 
 export { router as ttsRoutes };
+
+// No final do arquivo user.routes.ts certifique-se de ter:
+export default router;
